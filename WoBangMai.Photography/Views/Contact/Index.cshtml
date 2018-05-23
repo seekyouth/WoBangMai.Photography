@@ -1,0 +1,113 @@
+﻿@model WoBangMai.Models.cms_news
+@{
+    ViewBag.Title = "Index";
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<!-- Mirrored from by Maker Cloud Website www.va666.com -->
+<head>
+
+    <meta charset="utf-8">
+    <meta content="telephone=no" name="format-detection" />
+    <meta content="email=no" name="format-detection" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="generator" content="abcmoban.com">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    @{Html.RenderAction("_WebConfing", "Tools", new { categoryId = ViewBag.categoryId });}
+
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/slick.css">
+
+
+    <style type="text/css">
+        a, .section_title_1 .setting span, a.more, .side_box .section_title_1 > p, .form .section_title_1 > p, .catg_hide p, .list_text a:hover p, .catg_name a:hover, .foot_extend a:hover, .gallery_box:hover span {
+            color: #48b4c2;
+        }
+
+            .section_title_1 .setting span:after, .btn_1 a:hover, .catg_hide, a.btn_contact:hover, .form input:focus, .form textarea:focus {
+                border-color: #48b4c2;
+            }
+
+            .home .section_title_3 > p:after, .home .section_title_1 > p:after, .slick-dots li.slick-active button, .alpha_bg, .btn_1 a:after, .gallery_box:hover:before, .btn_2 a, .catg_name a.on, a.btn_2:before, .page_on a, a.btn_contact:hover, .formBtn button:hover, .service_box_text p a:hover {
+                background-color: #48b4c2;
+            }
+
+        .header {
+            background-color: #222;
+        }
+
+        .nav li a, .header_info p, .header_info p a {
+            color: #f0f0f0;
+        }
+
+        .on a {
+            border-color: #f0f0f0;
+        }
+    </style>
+    <script src="assets/js/jquery1.9.js"></script>
+    <script src="assets/js/slick.min.js"></script>
+    <script src="assets/js/scrollReveal.js"></script>
+    <script src="assets/js/main.js"></script>
+    <!--[if IE 8]>
+    <script src="http://h09b.abcmoban.com/assets/js/background-size.js"></script>	<script src="http://h09b.abcmoban.com/assets/js/selectivizr.js"></script>	<![endif]-->
+</head>
+<body>
+    <!--  RIGHT CONTENT  -->
+    @*导航*@
+    @{Html.RenderAction("_Nav", "Tools");}
+    <div class="h_100"></div>
+    <div class="contact_ second_page_b">
+        <img src="content/5-contact/3.jpg">
+    </div>
+
+
+
+    <div class="content">
+
+        <div class="second_page">
+
+            <div class="side_contact">
+
+                @*联系我们*@
+                @{Html.RenderAction("_ContactNewsSide", "Tools");}
+
+                <div class="form">
+                    <div class="section_title_1">
+                        <p>给我们留言</p><!-- 这个词不需要变量 -->
+                    </div>
+
+                    <form id="myform">
+                        <dl>
+                            <dt>您的称呼</dt>
+                            <dd><input id="name" type="text" name="name" class="formText"></dd>
+                        </dl>
+                        <dl>
+                            <dt>您的邮箱<small>(必填)</small></dt>
+                            <dd><input id="email" type="text" name="email" class="formText"></dd>
+                        </dl>
+                        <dl style="width:100%">
+                            <dt>您的想法/意见<small>(必填)</small></dt>
+                            <dd><textarea id="message" name="message" class="formText"></textarea></dd>
+                        </dl>
+                        <div class="formBtn"><button id="sendbtn" type="submit">发送留言</button></div>
+                        <div class="formBtn"><button id="sendingbtn">发送中...</button></div>
+                    </form>
+                </div>
+            </div>
+        </div><!-- second_page-end -->
+    </div><!-- content-end -->
+
+    @*底部*@
+    @{Html.RenderAction("_Footer", "Tools");}
+    <script type='text/javascript' src='assets/js/smoothscroll.js'></script>
+    <script src="assets/js/jquery.form.js"></script>
+    <script src="assets/js/contact.js"></script>
+</body>
+
+<!-- Mirrored from by Maker Cloud Website www.va666.com -->
+</html>
+

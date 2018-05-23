@@ -1,0 +1,13 @@
+F:\项目\西苑商城\WoBangMai.Photography\WoBangMai.Models\bin\Debug\WoBangMai.Models.dll
+F:\项目\西苑商城\WoBangMai.Photography\WoBangMai.Models\bin\Debug\WoBangMai.Models.pdb
+F:\项目\西苑商城\WoBangMai.Photography\WoBangMai.Models\obj\Debug\WoBangMai.Models.dll
+F:\项目\西苑商城\WoBangMai.Photography\WoBangMai.Models\obj\Debug\WoBangMai.Models.pdb
+F:\我帮买\西苑商城\WoBangMai.Photography\WoBangMai.Models\bin\Debug\WoBangMai.Models.dll
+F:\我帮买\西苑商城\WoBangMai.Photography\WoBangMai.Models\bin\Debug\WoBangMai.Models.pdb
+F:\我帮买\西苑商城\WoBangMai.Photography\WoBangMai.Models\obj\Debug\WoBangMai.Models.dll
+F:\我帮买\西苑商城\WoBangMai.Photography\WoBangMai.Models\obj\Debug\WoBangMai.Models.pdb
+F:\我帮买\西苑商城\WoBangMai.Photography\WoBangMai.Models\obj\Debug\WoBangMai.Models.csprojResolveAssemblyReference.cache
+F:\WoBangMai\WoBangMai.Photography\WoBangMai.Models\bin\Debug\WoBangMai.Models.dll
+F:\WoBangMai\WoBangMai.Photography\WoBangMai.Models\bin\Debug\WoBangMai.Models.pdb
+F:\WoBangMai\WoBangMai.Photography\WoBangMai.Models\obj\Debug\WoBangMai.Models.dll
+F:\WoBangMai\WoBangMai.Photography\WoBangMai.Models\obj\Debug\WoBangMai.Models.pdb

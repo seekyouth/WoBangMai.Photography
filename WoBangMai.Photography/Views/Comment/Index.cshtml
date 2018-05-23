@@ -1,0 +1,67 @@
+﻿
+@{
+    ViewBag.Title = "Index2";
+    Layout =null;
+}
+<head>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            margin: 10px;
+            font-size: 14px;
+            font-family: 宋体;
+        }
+
+        #commentHolder {
+            width: 98%;
+            border-bottom: 1px solid #aaa;
+        }
+
+        .comment {
+            padding: 5px 8px;
+            background: #f8fcff;
+            border: 1px solid #aaa;
+            font-size: 14px;
+            border-bottom: none;
+        }
+
+            .comment p {
+                padding: 5px 0;
+            }
+
+                .comment p.title {
+                    color: #1f3a87;
+                    font-size: 12px;
+                }
+
+                .comment p span {
+                    float: right;
+                    color: #666;
+                }
+
+            .comment div {
+                background: #ffe;
+                padding: 3px;
+                border: 1px solid #aaa;
+                line-height: 140%;
+                margin-bottom: 5px;
+            }
+
+                .comment div span {
+                    color: #1f3a87;
+                    font-size: 12px;
+                }
+    </style>
+</head>
+<body>
+    <div id="commentHolder">
+        @Html.Raw(ViewBag.commentStr)
+    </div>
+</body>
+
+
+

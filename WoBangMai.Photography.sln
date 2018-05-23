@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WoBangMai.Models", "WoBangMai.Models\WoBangMai.Models.csproj", "{F718E9F6-909E-4A56-AD9F-FA782CA34F7A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WoBangMai.Utils", "WoBangMai.Utils\WoBangMai.Utils.csproj", "{578215FC-5C61-4867-AC41-8CC54A7B7524}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WoBangMai.AiJia", "WoBangMai.AiJia\WoBangMai.AiJia.csproj", "{F172F271-0DFA-48AA-AE03-AFEA8BE1DE5A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WoBangMai.SDK", "WoBangMai.SDK\WoBangMai.SDK.csproj", "{C93D3A01-F700-434E-926F-6FAA0EAF416E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F718E9F6-909E-4A56-AD9F-FA782CA34F7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F718E9F6-909E-4A56-AD9F-FA782CA34F7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F718E9F6-909E-4A56-AD9F-FA782CA34F7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F718E9F6-909E-4A56-AD9F-FA782CA34F7A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{578215FC-5C61-4867-AC41-8CC54A7B7524}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{578215FC-5C61-4867-AC41-8CC54A7B7524}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{578215FC-5C61-4867-AC41-8CC54A7B7524}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{578215FC-5C61-4867-AC41-8CC54A7B7524}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F172F271-0DFA-48AA-AE03-AFEA8BE1DE5A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F172F271-0DFA-48AA-AE03-AFEA8BE1DE5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F172F271-0DFA-48AA-AE03-AFEA8BE1DE5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F172F271-0DFA-48AA-AE03-AFEA8BE1DE5A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C93D3A01-F700-434E-926F-6FAA0EAF416E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C93D3A01-F700-434E-926F-6FAA0EAF416E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C93D3A01-F700-434E-926F-6FAA0EAF416E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C93D3A01-F700-434E-926F-6FAA0EAF416E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

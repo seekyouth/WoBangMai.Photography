@@ -1,0 +1,181 @@
+﻿@model PageModel<WoBangMai.Models.cms_news>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var ajaxOption = new AjaxOptions()
+    {
+        HttpMethod = "Post",
+        UpdateTargetId = "tb001",
+        OnBegin = "$('#pageMode_tableConetnt').mask();",
+        OnComplete = "$('#pageMode_tableConetnt').unmask();",
+        InsertionMode = InsertionMode.Replace
+    };
+}
+
+
+<meta charset="utf-8">
+<meta content="telephone=no" name="format-detection" />
+<meta content="email=no" name="format-detection" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="generator" content="abcmoban.com">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+@{Html.RenderAction("_WebConfing", "Tools", new { categoryId = ViewBag.categoryId });}
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/slick.css">
+
+<style type="text/css">
+    a, .section_title_1 .setting span, a.more, .side_box .section_title_1 > p, .form .section_title_1 > p, .catg_hide p, .list_text a:hover p, .catg_name a:hover, .foot_extend a:hover, .gallery_box:hover span {
+        color: #48b4c2;
+    }
+
+        .section_title_1 .setting span:after, .btn_1 a:hover, .catg_hide, a.btn_contact:hover, .form input:focus, .form textarea:focus {
+            border-color: #48b4c2;
+        }
+
+        .home .section_title_3 > p:after, .home .section_title_1 > p:after, .slick-dots li.slick-active button, .alpha_bg, .btn_1 a:after, .gallery_box:hover:before, .btn_2 a, .catg_name a.on, a.btn_2:before, .page_on a, a.btn_contact:hover, .formBtn button:hover, .service_box_text p a:hover {
+            background-color: #48b4c2;
+        }
+
+    .header {
+        background-color: #222;
+        display: inherit !important;
+    }
+
+    .nav li a, .header_info p, .header_info p a {
+        color: #f0f0f0;
+    }
+
+    .on a {
+        border-color: #f0f0f0;
+    }
+</style>
+
+<!--[if IE 8]>
+<script src="http://h09b.abcmoban.com/assets/js/background-size.js"></script>	<script src="http://h09b.abcmoban.com/assets/js/selectivizr.js"></script>	<![endif]-->
+<!--  -->
+<div class="second_page_b">
+    <!-- <img src="images/b1.jpg"> -->
+</div>
+
+@*导航*@
+@{Html.RenderAction("_Nav", "Tools");}
+<div class="h_100"></div>
+<div class="content">
+
+    <div class="second_page">
+        <div class="side_l">
+
+            <!-- 画廊 -->
+            @{Html.RenderAction("_GalleryNewsSide", "Tools");}
+
+
+            @*联系我们*@
+            @{Html.RenderAction("_ContactNewsSide", "Tools");}
+
+        </div>
+
+        @using (Ajax.BeginForm("Index", "News", null, ajaxOption, new { @id = "PageModel_Form" }))
+            {
+            <div class="side_r news_">
+
+                <div class="section_title_1">
+                    <p>资讯/NEWS</p>
+                    <div class="setting"><img src='/content/image/title1.png' /></div>
+                </div>
+
+                @if (Model != null && Model.DataSource.Count() > 0)
+                {
+                    foreach (var item in Model.DataSource)
+                    {
+                        <div class="list_item">
+                            <div class="list_text">
+                                <p class="time_1">@(item.CreateTime == null ? DateTime.Now.ToString("yyyy-MM-dd") : ((DateTime)item.CreateTime).ToString("yyyy-MM-dd"))</p>
+                                <a href="/News/details/@item.News_ID"><p class="list_title">@(item.NewsTitle == null ? "" : item.NewsTitle)</p></a>
+                                <div class="list_brief">
+                                    <p>@(item.ShortContent == null ? "" : item.ShortContent)</p>
+                                </div>
+                                <div class="more_2"><a href="/News/details/@item.News_ID">了解详细</a></div>
+                            </div>
+                            <div class="list_img"><a href="/News/details/@item.News_ID"><img src="@(item.NewsPic == null ? "/thumbs/5-44d897aa04f39cf6025789389210875d.jpg" : item.NewsPic)"></a></div>
+
+                        </div><!-- item-end -->
+                    }
+                }
+                else
+                {
+                    <div class="list_item">
+                        <div class="list_text">
+                            <p class="time_1">2014-11-04</p>
+                            <a href="news/-news-1.html"><p class="list_title">春季联名款全面呈现</p></a>
+                            <div class="list_brief">
+                                <p>Vans Liberty 2015 年春季联名款已全面呈现，此次Liberty 和Vans 的春季联名更加迎合季节特点，此次系列依然用了Vans的经典鞋型Era</p>
+                            </div>
+                            <div class="more_2"><a href="news/-news-1.html">了解详细</a></div>
+                        </div>
+                        <div class="list_img"><a href="news/-news-1.html"><img src="/thumbs/5-44d897aa04f39cf6025789389210875d.jpg"></a></div>
+
+                    </div><!-- item-end -->
+
+                    <div class="list_item">
+                        <div class="list_text">
+                            <p class="time_1">2014-11-15</p>
+                            <a href="news/-news-2.html"><p class="list_title">Street Snap灰色初春的气息</p></a>
+                            <div class="list_brief">
+                                <p>如 果说初春是万物复苏，太鲜艳太春天的颜色巴打驾驭不了，那么刚刚好的灰色给即将来临的暖春做了一道铺垫，一样不冷也不热的颜色穿上身上也会觉得十分舒适。 除了黑白两</p>
+                            </div>
+                            <div class="more_2"><a href="news/-news-2.html">了解详细</a></div>
+                        </div>
+                        <div class="list_img"><a href="news/-news-2.html"><img src="/thumbs/3-56cbced7b84d3ab0d0cf8f149c1b4fc6.jpg"></a></div>
+
+                    </div><!-- item-end -->
+
+                    <div class="list_item">
+                        <div class="list_text">
+                            <p class="time_1">2014-11-13</p>
+                            <a href="news/-news-3.html"><p class="list_title">简约舒适的春日实穿方案</p></a>
+                            <div class="list_brief">
+                                <p>褪去厚重的棉服和夹克，春天的到来你只需要一件浅色打底Tee，以及，一件简约的字母印花套头卫衣。Chino的随意舒适的属性也给整体搭配看起来清爽不少，Sneake</p>
+                            </div>
+                            <div class="more_2"><a href="news/-news-3.html">了解详细</a></div>
+                        </div>
+                        <div class="list_img"><a href="news/-news-3.html"><img src="/thumbs/5-6ea8e265c3a5c40a32eb0c5cd15f9d3f.jpg"></a></div>
+
+                    </div><!-- item-end -->
+
+                    <div class="list_item">
+                        <div class="list_text">
+                            <p class="time_1">2014-11-28</p>
+                            <a href="news/-news-4.html"><p class="list_title">KTZ x New Era高级定制即将来袭</p></a>
+                            <div class="list_brief">
+                                <p>制帽业大亨New Era同来自伦敦的高街服装品牌KTZ 日前正式完成了一项联名提案。该合作计划共涉及两件帽款的制作。作为两家街头时尚大亨之间的合作，本次所推出的</p>
+                            </div>
+                            <div class="more_2"><a href="news/-news-4.html">了解详细</a></div>
+                        </div>
+                        <div class="list_img"><a href="news/-news-4.html"><img src="/thumbs/1-7d50e08d53a1452c4611bd102a169b25.jpg"></a></div>
+
+                    </div><!-- item-end -->
+
+                    <div class="list_item">
+                        <div class="list_text">
+                            <p class="time_1">2014-11-12</p>
+                            <a href="news/-nihaoma.html"><p class="list_title">TEENTEAMGOLDEN AGE 80's系列发售中</p></a>
+                            <div class="list_brief">
+                                <p>2015年.TEENTEAM迈进第十个年头，十年，是人生的回车键。是回顾！也是新开始!就像潮流圈的美林时钟。所谓古老当时兴,潮流总是半个世纪就轮回一次复刻是个永</p>
+                            </div>
+                            <div class="more_2"><a href="news/-nihaoma.html">了解详细</a></div>
+                        </div>
+                        <div class="list_img"><a href="news/-nihaoma.html"><img src="/thumbs/1-317e0c49096080fa264bf1e1a1498d5d.jpg"></a></div>
+
+                    </div><!-- item-end -->
+                }
+
+                @(Html.PageTableFor("PageModel_Form").SetClass("baseui-table"))
+
+            </div>
+        }
+    </div><!-- second_page-end -->
+</div><!-- content-end -->
+@*底部*@
+@{Html.RenderAction("_Footer", "Tools");}
+

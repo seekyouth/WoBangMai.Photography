@@ -1,0 +1,55 @@
+﻿@{
+    Layout = null;
+}
+
+
+
+
+<hr style="filter: alpha(opacity=100,finishopacity=0,style=3);margin:30px 0px 30px 0px" width="100%" color=#f2f3f6 size=1 />
+
+<div class="widget-box">
+    <section class="widget-content">
+        <!-- You can start editing here. -->
+        <div id="comments">
+            <h3>3 条评论</h3>
+        </div>
+        <div class="comments-loading"><i class="fa fa-spinner fa-spin fa-lg"></i> 评论正在加载 ...</div>
+        <div id="commentHolder">
+            @Html.Raw(ViewBag.commentStr)
+        </div>
+        <div class="page-nav comment-nav"></div>
+        <div class="clear"></div>
+        <div id="respond" class="comment-respond">
+            <h3 id="reply-title" class="comment-reply-title">发表评论 <small><a rel="nofollow" id="cancel-comment-reply-link" href="/kantoujiqiao.html#respond" style="display:none;">取消回复</a></small></h3>
+            <form action="@Url.Action("Edit_Comment","Comment")" method="post" id="commentform" class="comment-form">
+
+                <p class="comment-notes">
+                    <span id="email-notes">电子邮件地址不会被公开。</span> 必填项已用<span class="required">*</span>标注
+                </p>
+                <p class="comment-form-comment">
+                    <textarea required="" id="comment" name="Content" cols="45" rows="8" aria-required="true"></textarea>
+                   <div id="loading" style="display: none;">
+                        <img src="http://www.drlmeng.com/wp-admin/images/wpspin_light.gif" style="vertical-align:middle;" alt="">正在提交，请稍后 ...
+                    </div>
+                    <div id="error" style="display: none;">#</div>
+                    <textarea name="Content" cols="60" rows="4" style="display:none" ></textarea>
+                </p><p class="comment-form-author">
+                    <label for="author">姓名 <span class="required">*</span></label>
+                    <input id="author" name="UserName" type="text" value="645" size="30" maxlength="245" aria-required="true" required="required">
+                </p>
+                <p class="comment-form-email">
+                    <label for="email">电子邮件 <span class="required">*</span></label>
+                    <input id="email" name="Email" type="text" value="45645@qq.com" size="30" maxlength="100" aria-describedby="email-notes" aria-required="true" required="required">
+                </p>
+                <p class="comment-form-url"><label for="url">站点</label> <input id="url" name="url" type="text" value="http://6" size="30" maxlength="200"></p>
+                <p class="form-submit">
+                    <input name="submit" type="submit" id="submit" class="submit" value="发表评论">
+                    <input type="hidden" name="comment_post_ID" value="21304" id="comment_post_ID">
+                    <input type="hidden" name="comment_parent" id="comment_parent" value="0">
+                </p><p><label for="comment_mail_notify"><input type="checkbox" name="comment_mail_notify" id="comment_mail_notify" value="comment_mail_notify" checked="checked">有人回复时邮件通知我</label></p>
+            </form>
+        </div><!-- #respond -->
+    </section>
+</div>
+
+

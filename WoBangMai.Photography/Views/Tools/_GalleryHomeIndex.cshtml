@@ -1,0 +1,40 @@
+﻿@model IEnumerable<WoBangMai.Models.cms_news>
+@{  Layout = null; }
+<div class="section home">
+    <div class="section_title_1" data-scroll-reveal>
+        <p><img src='/content/image/title2.png' /></p>
+        <!-- <a href="http://h09b.abcmoban.com/categories" class="more">查看更多</a> -->
+        <div class="setting">作品/GALLERY</div>
+    </div>
+    @if (Model == null || Model.Count() <= 0)
+    {
+        <div class="gallery_list" data-scroll-reveal>
+            <div class="gallery_box">
+                <img src="/thumbs/33b42620197741.5604206c09195-f07bfcf5068570fc40557dcf87fa9155.jpg">
+                <span>为空默认显示</span>
+            </div>
+            <div class="gallery_box">
+                <img src="/thumbs/80e47620267327.562e87fee1441-2ed6f9ea48499df6ee25b48537e7ab2e.jpg">
+                <span>为空默认显示</span>
+            </div>
+            <div class="gallery_box">
+                <img src="/thumbs/552ae513053821.5627041471397-52535c95f087f3902dac76b41922a3b6.jpg">
+                <span>为空默认显示</span>
+            </div>
+        </div>
+    }
+    else
+    {
+        <div class="gallery_list" data-scroll-reveal>
+            @foreach (var item in Model)
+            {
+            <div class="gallery_box">
+                <img src="@(item.NewsPic==null?"/thumbs/33b42620197741.5604206c09195-f07bfcf5068570fc40557dcf87fa9155.jpg":item.NewsPic)">
+                <span>@(item.NewsTitle==null?"":item.NewsTitle)</span>
+                <a href="/gallery/details/@item.News_ID"></a>
+            </div>
+            }
+        </div>
+    }
+    <div class="btn_2"><a href="/Gallery/Index">查看更多</a></div>
+</div><!-- section结束 -->

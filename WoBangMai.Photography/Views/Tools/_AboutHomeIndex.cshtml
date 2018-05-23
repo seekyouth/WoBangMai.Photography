@@ -1,0 +1,20 @@
+﻿@model WoBangMai.Models.cms_news
+@{
+    Layout = null;
+}
+<div class="bg_blur" style="background-image:url(/content/4-about/about.jpg)" data-parallax-background-inertia="0.3"></div>
+<div class="section_2_cell">
+
+    <div class="section_2_left">
+        <div class="section_title_2" data-scroll-reveal>
+            <p>关于/ABOUT</p>
+            <div class="setting"><img src='/content/image/title1.png' /></div>
+        </div>
+        <div class="section_2_brief" data-scroll-reveal>
+            <p>
+               @(Model==null?"为空默认显示":Model.ShortContent)
+            </p>
+        </div>
+        <div class="btn_1"><a href="/About/Index">了解详细</a></div>
+    </div>
+</div>

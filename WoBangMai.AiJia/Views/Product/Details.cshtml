@@ -1,0 +1,233 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = null;
+    var lastNexProductList = ViewBag.lastNexProductList as List<WoBangMai.Models.News>;
+    var otherProductList = ViewBag.otherProductList as List<WoBangMai.Models.News>;
+}
+@model WoBangMai.Models.News
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" class="agent-pc theme-w theme-wblue">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="@Model.SeoDescription" />
+    <meta name="author" content="Maker Cloud" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <link href="~/Content/Css/lib2.css" rel="stylesheet" />
+    <link href="~/Content/Css/style.base.css" rel="stylesheet" />
+    <link href="~/Content/Css/wblue.css" rel="stylesheet" />
+    <link href="~/Content/Css/base.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery.min.js"></script>
+    <script src="~/Scripts/org.base.js" data-main="baseMain"></script>
+    <script src="~/Scripts/Base.js"></script>
+    <title>@Model.Title</title>
+</head>
+<body id="longPage" class="gh0  longPage   bodyproject ">
+    <div class="bodyMask"></div>
+    <div id="header">
+        <div class="wrapper">
+            <div class="content">
+                <div id="headTop">
+                    <a href="/" id="logo"><img src="/cloud/picture/logo.png" height="44"></a>
+                </div>
+                <div id="navWrapper">
+                    @{Html.RenderAction("_Nav", "Part");}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="sitecontent" class="ff_sitecontent">
+        <div class="npagePage post ff_postPage">
+            <div id="pageTarget" class="ff_pageTarget module">
+                <div class="module_container">
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <div class="content">
+                <div class="mlistpost project module">
+                    <div class="module_container">
+                        <div class="container_content">
+                            <div class="content_wrapper">
+                                <div id="postWrapper">
+                                    <div id="postSlider" class="postSlider team_tabs mlist">
+                                        <div class="tab_content">
+                                            <div class="item_block item_block_0">
+                                                <div class="wrapper">
+                                                    <div class="item_img">
+                                                        <img src="/uploads/allimg/171110/1-1G110204G3.jpg" />
+                                                    </div>
+                                                </div>
+                                            </div><div class="item_block item_block_1">
+                                                <div class="wrapper">
+                                                    <div class="item_img">
+                                                        <img src="/uploads/allimg/171110/1-1G110204G4.jpg" />
+                                                    </div>
+                                                </div>
+                                            </div><div class="item_block item_block_2">
+                                                <div class="wrapper">
+                                                    <div class="item_img">
+                                                        <img src="/uploads/allimg/171110/1-1G110204G5.jpg" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab_button">
+                                            <div class="item_block_0 item_block active" data-tab-index="0">
+                                                <div class="wrapper">
+                                                    <div class="item_img">
+                                                        <img src="/uploads/allimg/171110/1-1G110204G3.jpg" />
+                                                    </div>
+                                                </div>
+                                            </div><div class="item_block_1 item_block active" data-tab-index="0">
+                                                <div class="wrapper">
+                                                    <div class="item_img">
+                                                        <img src="/uploads/allimg/171110/1-1G110204G4.jpg" />
+                                                    </div>
+                                                </div>
+                                            </div><div class="item_block_2 item_block active" data-tab-index="0">
+                                                <div class="wrapper">
+                                                    <div class="item_img">
+                                                        <img src="/uploads/allimg/171110/1-1G110204G5.jpg" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="postContent">
+                                        <div class="postInfo">
+                                            <div class="mainInfor">
+                                                <p class="title">@Model.Title??""</p>
+                                                @*<p class="subtitle">宾尚E系列</p>*@
+                                            </div>
+                                            <div class="description">
+                                                <p>@Html.Raw(Model.ZhaiYao ?? "")</p>
+                                            </div>
+                                        </div>
+                                        <div class="postbody">
+                                            <hr style="white-space: normal;border-top: 1px dotted rgba(170,170,170,.2);">
+                                            <p>
+                                                @Html.Raw(Model.Content ?? "")
+                                            </p>
+                                        </div>
+                                        <div class="conTabBtn tabBtn">
+                                            @if (lastNexProductList != null)
+                                            {
+                                                foreach (var item in lastNexProductList)
+                                                {
+                                                    <a href="/Product/Details/@item.Id" class="post-prev">
+                                                        <div class="img-wrap">
+                                                            <img src="@item.ImgUrl" alt="@item.Title??''" />
+                                                        </div>
+                                                        <div class="infor-wrap">
+                                                            <span class="title">item.Title??''</span>
+                                                            @*<span class="subtitle">Wool scarf</span>*@
+                                                        </div> <i class="details"></i>
+                                                        <div class="tabMask"></div>
+                                                    </a>
+                                                }
+                                            }
+                                        </div>
+                                    </div>
+                                    <div class="listWrap">
+                                        <div id="listContent" class="listContent_post">
+                                            <div class="mlist type04">
+                                                <div class="content_wrapper">
+                                                    <div class="content_list clearfix">
+                                                        @if (otherProductList != null)
+                                                        {
+                                                            foreach (var item in otherProductList)
+                                                            {
+                                                        <div id="item_block_@item.Id" class="item_block_@item.Id item_block wow" style="animation-delay:.1s">
+                                                            <div class="item_index">
+                                                                01
+                                                            </div>
+                                                            <a href="/Product/Details/@item.Id" class="item_box">
+                                                                <div href="/Product/Details/@item.Id" class="item_img" target="_blank">
+                                                                    <img src="@item.ImgUrl??" />
+                                                                    <div class="item_mask"></div>
+                                                                </div>
+                                                                <div class="item_wrapper clearfix">
+                                                                    <div class="item_info clearfix">
+                                                                        <div class="date_wrap">
+                                                                            <span class="year">@item.AddTime.Year</span>
+                                                                            <i class="time-connect">-</i>
+                                                                            <span class="m">@item.AddTime.Month</span>
+                                                                            <i class="time-connect">-</i>
+                                                                            <span class="d">@item.AddTime.Day</span>
+                                                                        </div>
+                                                                        <p class="title ellipsis">@item.Title??""</p>
+                                                                        @*<p class="subtitle ellipsis">@item.SeoKeywords??""</p>*@
+                                                                    </div>
+                                                                    <div class="date_wrap">
+                                                                        <span class="year">@item.AddTime.Year</span>
+                                                                        <i class="time-connect">-</i>
+                                                                        <span class="m">@item.AddTime.Month</span>
+                                                                        <i class="time-connect">-</i>
+                                                                        <span class="d">@item.AddTime.Day</span>
+                                                                    </div>
+                                                                    <div class="item_des">
+                                                                        <p class="description">@item.ZhaiYao</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="item_index">
+                                                                    @item.Title??""
+                                                                </div>
+                                                            </a>
+                                                            <a href="/Product/Details/@item.Id" class="details">MORE<i class="fa fa-angle-right" aria-hidden="true"></i> </a>
+                                                            <div class="item_tags clearfix">
+                                                                <i class="fa fa-tags"></i>
+                                                                <a href="/Product/Details/@item.Id">@item.Title??""</a>
+                                                            </div>
+                                                        </div>
+                                                            }
+                                                        }
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="clear"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    @*底部*@
+    @{Html.RenderAction("_Footer", "Part");}
+    @*底部*@
+    @*分享*@
+    @{Html.RenderAction("_Shares", "Part");}
+    @*分享*@
+
+    @*定点*@
+    @{Html.RenderAction("_Fixed", "Part");}
+    @*定点*@
+
+    @*在线跳转*@
+    @{Html.RenderAction("_OnlineOpen", "Part");}
+    @*在线跳转*@
+
+    @*在线咨询*@
+    @{Html.RenderAction("_OnlineLx", "Part");}
+    @*在线咨询*@
+
+    @*协助*@
+    @{Html.RenderAction("_OpenAssist", "Part");}
+    @*协助*@
+
+    @*返回顶部*@
+    @{Html.RenderAction("_AssistBtn", "Part");}
+    @*返回顶部*@
+    <div class="hide">
+    </div>
+</body>
+</html>

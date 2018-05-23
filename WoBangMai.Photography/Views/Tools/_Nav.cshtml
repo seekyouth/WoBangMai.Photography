@@ -1,0 +1,111 @@
+﻿@using WoBangMai.Utils;
+@model IEnumerable<WoBangMai.Models.cms_category>
+@{
+    Layout = null;
+    var currentNav = TempData["currentNav"];
+}
+
+<link href="~/assets/css/signinstyle.css" rel="stylesheet" />
+<link href="~/assets/css/signinmain.css" rel="stylesheet" />
+<script src="~/assets/js/signinmain.js"></script>
+<script src="~/assets/js/jquery.validate.min.js"></script>
+<script src="~/assets/js/jquery.validate.unobtrusive.min.js"></script>
+<div class="header">
+
+    <div class="nav">
+        <div class="logo"><a href="/Home"><img src="/content/setting/logo.png"></a></div>
+        <div class="nav_icon"></div>
+        <div class="side_close"></div>
+        <ul>
+
+            <li class=@(ZConvert.ToInt(currentNav)==EnumModels.CategoryEnum.Home.GetHashCode()? "on":"off")><a href="/Home" target="_self">首页/HOME</a></li>
+
+
+            <li class=@(ZConvert.ToInt(currentNav)==EnumModels.CategoryEnum.News.GetHashCode()? "on":"off")><a href="/News" target="_self">资讯/NEWS</a></li>
+
+
+            <li class=@(ZConvert.ToInt(currentNav)==EnumModels.CategoryEnum.Gallery.GetHashCode()? "on":"off")><a href="/Gallery" target="_self">作品/GALLERY</a></li>
+
+
+            <li class=@(ZConvert.ToInt(currentNav)==EnumModels.CategoryEnum.About.GetHashCode()? "on":"off")><a href="/About" target="_self">关于/ABOUT</a></li>
+
+
+            <li class=@(ZConvert.ToInt(currentNav)==EnumModels.CategoryEnum.Contact.GetHashCode()? "on":"off")><a href="/Contact" target="_self">联系/CONTACT</a></li>
+
+
+            <li class=@(ZConvert.ToInt(currentNav)==EnumModels.CategoryEnum.Other.GetHashCode()? "on":"off")><a href="/Other" target="_self">自由页面/OTHER</a></li>
+
+
+            <span class="main_nav"><li><a class="cd-signin" href="#0">登录/LOGIN</a></li></span>
+
+        </ul>
+
+        <div class="header_info"><p> <img src="/RoCode.ashx?action=code&codeUrl='/Home'" /></p></div>
+    </div>
+
+</div>
+
+
+<div class="cd-user-modal">
+    <div class="cd-user-modal-container">
+        <ul class="cd-switcher">
+            <li><a href="#0" class="selected">用户登录</a></li>
+            <li><a href="#0">注册新用户</a></li>
+        </ul>
+
+        <div id="cd-login">
+            <!-- 登录表单 -->
+            <form class="cd-form">
+                <p class="fieldset">
+                    <label class="image-replace cd-username" for="signin-username">用户名</label>
+                    <input class="full-width has-padding has-border" id="signin-username" type="text" placeholder="输入用户名">
+                </p>
+
+                <p class="fieldset">
+                    <label class="image-replace cd-password" for="signin-password">密码</label>
+                    <input class="full-width has-padding has-border" id="signin-password" type="text" placeholder="输入密码">
+                </p>
+
+                <p class="fieldset">
+                    <input type="checkbox" id="remember-me" checked>
+                    <label for="remember-me">记住登录状态</label>
+                </p>
+
+                <p class="fieldset">
+                    <input class="full-width2" type="submit" value="登 录">
+                </p>
+            </form>
+        </div>
+
+        <div id="cd-signup">
+            <!-- 注册表单 -->
+            <form class="cd-form">
+                <p class="fieldset">
+                    <label class="image-replace cd-username" for="signup-username">用户名</label>
+                    <input class="full-width has-padding has-border" id="signup-username" type="text" placeholder="输入用户名">
+                </p>
+
+                <p class="fieldset">
+                    <label class="image-replace cd-email" for="signup-email">邮箱</label>
+                    <input class="full-width has-padding has-border" id="signup-email" type="email" placeholder="输入mail">
+                </p>
+
+                <p class="fieldset">
+                    <label class="image-replace cd-password" for="signup-password">密码</label>
+                    <input class="full-width has-padding has-border" id="signup-password" type="text" placeholder="输入密码">
+                </p>
+
+                <p class="fieldset">
+                    <input type="checkbox" id="accept-terms">
+                    <label for="accept-terms">我已阅读并同意 <a href="#0">用户协议</a></label>
+                </p>
+
+                <p class="fieldset">
+                    <input class="full-width2" type="submit" value="注册新用户">
+                </p>
+            </form>
+        </div>
+
+        <a href="#0" class="cd-close-form">关闭</a>
+    </div>
+</div> 

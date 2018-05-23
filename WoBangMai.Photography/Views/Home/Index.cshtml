@@ -1,0 +1,113 @@
+﻿@{
+    ViewBag.Title = "View";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<meta charset="utf-8">
+<meta content="telephone=no" name="format-detection" />
+<meta content="email=no" name="format-detection" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="generator" content="abcmoban.com">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+@{Html.RenderAction("_WebConfing", "Tools");}
+<link rel="shortcut icon" href="favicon.ico" />
+<link href="/assets/css/style.css" rel="stylesheet" />
+<link href="/assets/css/slick.css" rel="stylesheet" />
+<style type="text/css">
+    a, .section_title_1 .setting span, a.more, .side_box .section_title_1 > p, .form .section_title_1 > p, .catg_hide p, .list_text a:hover p, .catg_name a:hover, .foot_extend a:hover, .gallery_box:hover span {
+        color: #48b4c2;
+    }
+
+        .section_title_1 .setting span:after, .btn_1 a:hover, .catg_hide, a.btn_contact:hover, .form input:focus, .form textarea:focus {
+            border-color: #48b4c2;
+        }
+
+        .home .section_title_3 > p:after, .home .section_title_1 > p:after, .slick-dots li.slick-active button, .alpha_bg, .btn_1 a:after, .gallery_box:hover:before, .btn_2 a, .catg_name a.on, a.btn_2:before, .page_on a, a.btn_contact:hover, .formBtn button:hover, .service_box_text p a:hover {
+            background-color: #48b4c2;
+        }
+
+    .header {
+        background-color: #222;
+        display: inherit !important;
+    }
+
+    .nav li a, .header_info p, .header_info p a {
+        color: #f0f0f0;
+    }
+
+    .on a {
+        border-color: #f0f0f0;
+    }
+</style>
+
+<!--[if IE 8]>
+<script src="/assets/js/background-size.js"></script>
+<script src="/assets/js/selectivizr.js"></script>
+<![endif]-->
+@*幻灯*@
+@{Html.RenderAction("_Slider", "Tools");}
+
+@*导航*@
+@{Html.RenderAction("_Nav", "Tools");}
+
+<div class="h_100"></div>
+
+<div class="content">
+    <div class="section home">
+        <div class="section_title_1" data-scroll-reveal>
+            <p>WELCOME</p>
+            <div class="setting"><p>我们的服务</p></div>
+        </div>
+
+        <div class="service_box" data-scroll-reveal>
+            <img src="/content/setting/service1.jpg">
+            <div class="service_box_text">
+                <h4>专业的数码转换</h4>
+                <p>
+                    It’s a place full of beauty and experiences, experiences that become memories. Come and enjoy the beauty of the sea, the sky, the earth, the people and spend
+                    <a href="#">了解更多</a>
+                </p>
+            </div>
+        </div>
+        <div class="service_box" data-scroll-reveal>
+            <img src="/content/setting/service2.jpg">
+            <div class="service_box_text">
+                <h4>走向更美好的人生路径</h4>
+                <p>
+                    Kassandra Bay Resort & Spa is a unique Resort Complex nestled within a timeless landscape by the sea and surrounded by nature in the beautiful island of Skiathos.
+                    <a href="#">了解更多</a>
+                </p>
+
+            </div>
+        </div>
+        <div class="service_box" data-scroll-reveal>
+            <img src="/content/setting/service3.jpg">
+            <div class="service_box_text">
+                <h4>专业的数码转换</h4>
+                <p>
+                    Kassandra Bay Resort & Spa is perfectly located along the blue waters of Vasilias beach and surrounded by olive groves and lush gardens. The hotel is located 3km
+                    <a href="#">了解更多</a>
+                </p>
+            </div>
+        </div>
+    </div><!-- section结束 -->
+    <!-- 关于 -->
+    <div class="section_2 home home_about">
+        <!-- 关于我们 -->
+        @{Html.RenderAction("_AboutHomeIndex", "Tools");}
+
+    </div><!-- section2结束 -->
+    <!-- 画廊 -->
+    @{Html.RenderAction("_GalleryHomeIndex", "Tools");}
+
+
+    <!-- 新闻 -->
+    @{Html.RenderAction("_NewsHomeIndex", "Tools");}
+
+</div>
+<!-- END -->
+@*底部*@
+@{Html.RenderAction("_Footer", "Tools");}
+
+
+
+

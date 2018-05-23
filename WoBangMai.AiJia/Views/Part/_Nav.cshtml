@@ -1,0 +1,56 @@
+﻿@using WoBangMai.Utils;
+@model IEnumerable<WoBangMai.Models.Category>
+@{
+    Layout = null;
+    string currentNav =ZConvert.ToString(TempData["currentNav"]);
+}
+
+
+<div class="content">
+    <ul class="nav movedx" data-movedx-mid="1">
+        <li class="navitem"> <a class='@(currentNav==""?"active":"")' href="/" target="_self"> <span data-title="首页">首页</span> </a></li>
+        @if (Model != null)
+        {
+            foreach (var item in Model)
+            {
+                <li class="navitem">
+                    <a class='@(currentNav==item.Title?"active":"")' href="javascript:;"> <span data-title="@(item.Title??"")">@(item.Title??"")</span><i class="fa fa-angle-down"></i></a>
+                    @if (Model.Where(m => m.ParentId == item.Id).Count() > 0)
+                    {
+                        <ul class="subnav">
+                            @foreach (var item2 in Model.Where(m => m.ParentId == item.Id))
+                            {
+                                <li><a href="/Product/Index">@(item2.Title??"")</a></li>
+                            }
+                        </ul>
+                    }
+                </li>
+            }
+        }
+
+        @*<li class="navitem">
+            <a class='' href="javascript:;"> <span data-title="案例">案例</span><i class="fa fa-angle-down"></i></a>
+            <ul class="subnav">
+                <li><a href="/Case/Index">环卫机械</a></li>
+                <li><a href="/Case/Index">运输机械</a></li>
+            </ul>
+        </li>
+        <li class="navitem">
+            <a class='' href="javascript:;"> <span data-title="新闻中心">新闻中心</span><i class="fa fa-angle-down"></i></a>
+            <ul class="subnav">
+                <li><a href="/News/Index">行业新闻</a></li>
+                <li><a href="/News/Index">公司新闻</a></li>
+            </ul>
+        </li>
+        <li class="navitem">
+            <a class='' href="javascript:;"> <span data-title="关于我们">关于我们</span><i class="fa fa-angle-down"></i></a>
+            <ul class="subnav">
+                <li><a href="/Page/Index">关于我们</a></li>
+                <li><a href="/Page/Index">服务支持</a></li>
+            </ul>
+        </li>
+        <li class="navitem">
+            <a class='' href="/Page/Index"> <span data-title="联系我们">联系我们</span></a>
+        </li>*@
+    </ul>
+</div>

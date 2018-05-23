@@ -1,0 +1,33 @@
+﻿@model IEnumerable<WoBangMai.Models.cms_news>
+@{  Layout = null; }
+<!-- 画廊 -->
+<div class="side_box">
+    <div class="section_title_1">
+        <p>作品/GALLERY</p>
+    </div>
+
+    @if (Model != null && Model.Count() <= 0)
+    {
+        <div class="gallery_box">
+            <img src="/thumbs/33b42620197741.5604206c09195-c56b1758dcefe5c480b975f2b45d8f8a.jpg">
+            <span>为空默认</span>
+           
+        </div>
+        <div class="gallery_box">
+            <img src="/thumbs/80e47620267327.562e87fee1441-8d65d4adac610cb28c93a5482fbcbf17.jpg">
+            <span>为空默认</span>
+        </div>
+    }
+    else
+    {
+        foreach (var item in Model.Take(2))
+        {
+            <div class="gallery_box">
+                <img src="@(item.NewsPic==null?"/thumbs/33b42620197741.5604206c09195-c56b1758dcefe5c480b975f2b45d8f8a.jpg":item.NewsPic)">
+                <span>@(item.NewsTitle == null ? "" : item.NewsTitle)</span>
+                <a href="/Gallery/Details/@item.News_ID"></a>
+            </div>
+        }
+    }
+    <a href="/Gallery/Index" class="btn_contact">查看更多</a>
+</div>

@@ -1,0 +1,547 @@
+﻿.container_category>a.active,
+.container_category>a:hover,
+.item_tags>a.active,
+.item_tags>a:hover {
+    border-color: #6388cf ;
+    background-color: #6388cf 
+}
+
+#search-list .searchFormGroup input,
+body #search-header .searchFormGroup input {
+    border-color: #6388cf 
+}
+
+#search-list .searchFormGroup .searchSub,
+body #search-header .searchFormGroup .searchSub {
+    background-color: #6388cf 
+}
+
+
+
+.imagelink .owl-nav .owl-next:hover,
+.imagelink .owl-nav .owl-prev:hover,
+.mlist .owl-nav .owl-next:hover,
+.mlist .owl-nav .owl-prev:hover,
+.postSlider .owl-nav .owl-next:hover,
+.postSlider .owl-nav .owl-prev:hover {
+    background-color: #6388cf 
+}
+
+.imagelink .owl-dots .owl-dot.active span,
+.imagelink .owl-dots .owl-dot:hover span,
+.mlist .owl-dots .owl-dot.active span,
+.mlist .owl-dots .owl-dot:hover span {
+    background-color: #6388cf ;
+    border-color: #6388cf 
+}
+
+.ff_indexPage .team_tabs.mlist .tab_button .item_block:before {
+    background-color: #6388cf 
+}
+
+.ff_indexPage .team_tabs.mlist .tab_button .item_block.active .title {
+    color: #6388cf 
+}
+
+.mcustomize .container_content .contentbody .description a:hover {
+    background-color: #6388cf ;
+    border-color: #6388cf 
+}
+
+.news.mlistpost .tabBtn .post-next:not(.empty):hover,
+.news.mlistpost .tabBtn .post-prev:not(.empty):hover,
+.project.mlistpost .tabBtn .post-next:not(.empty):hover,
+.project.mlistpost .tabBtn .post-prev:not(.empty):hover,
+.service.mlistpost .tabBtn .post-next:not(.empty):hover,
+.service.mlistpost .tabBtn .post-prev:not(.empty):hover,
+.team.mlistpost .tabBtn .post-next:not(.empty):hover,
+.team.mlistpost .tabBtn .post-prev:not(.empty):hover {
+    background-color: #6388cf 
+}
+
+#longPage #header #navWrapper .content .nav .navitem>a:hover span:before {
+    color: #6388cf 
+}
+
+#longPage #header #navWrapper .content .nav .navitem>a:hover .fa-angle-down {
+    color: #6388cf 
+}
+
+
+::-webkit-scrollbar {
+    background-color: #6388cf 
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #6388cf 
+}
+
+#pages .page-item.active,
+#pages .page-item:hover {
+    border-color: #6388cf ;
+    background-color: #6388cf 
+}
+
+.ff_pageTarget .container_target a:hover {
+    color: #6388cf 
+}
+
+.ff_pageTarget .container_target a:last-child {
+    color: #6388cf 
+}
+
+.postSlider .tab_button .item_block.current .item_img:after,
+.postSlider .tab_button .item_block:hover .item_img:after {
+    border-color: #6388cf 
+}
+
+body #navWrapper .content .nav>.navitem .subnav {
+    border-color: #6388cf 
+}
+
+body #navWrapper .content .nav>.navitem .subnav li a:hover {
+    background-color: #6388cf 
+}
+
+.ff_indexPage .mlist .content_wrapper .more:hover {
+    background-color: #6388cf 
+}
+
+#sliderDirThemb,
+#sliderDotThemb {
+    border-color: #6388cf 
+}
+
+.service.mlist:not(.imagelink) .content_list .item_block:hover .item_box .item_wrapper {
+    background-color: #6388cf 
+}
+
+#shares a:hover {
+    border-color: #6388cf ;
+    background-color: #6388cf 
+}
+
+#online_open:hover {
+    border-color: #6388cf ;
+    background-color: #6388cf 
+}
+
+#olx_head {
+    background-color: #6388cf 
+}
+
+#olx_qq li a:hover {
+    color: #6388cf 
+}
+
+.bodyproject .ff_sitecontent .ff_postPage .project .item_tags a:hover {
+    background-color: #6388cf 
+}
+
+.bodyproject .ff_sitecontent .ff_postPage .project .content_list .item_block:hover .details {
+    background-color: #6388cf 
+}
+
+.bodyproject .ff_sitecontent .ff_postPage .project .content_list .item_block:hover .item_info .title {
+    color: #6388cf 
+}
+
+.container_category>a.active {
+    border-color: #6388cf ;
+    background-color: #6388cf 
+}
+
+.mcustomize.tril .mediabody::after {
+    background-color: #6388cf 
+}
+
+.container_category>a.active,
+.container_category>a:hover,
+.item_tags>a.active,
+.item_tags>a:hover {
+    border-color: #6388cf ;
+    background-color: #6388cf 
+}
+
+.service.mlist .owl-dots .owl-dot.active span {
+    border-color: #6388cf ;
+    background-color: #6388cf 
+}
+
+.bodyservice .ff_sitecontent .ff_postPage .service .item_tags a:hover {
+    background-color: #6388cf 
+}
+
+.bodyteam .ff_pageList .team .content_list .item_block:hover {
+    background-color: #6388cf 
+}
+
+.bodyteam .ff_sitecontent .ff_postPage .team .listContent_post .item_tags a:hover {
+    border-color: #6388cf ;
+    background-color: #6388cf 
+}
+
+.ad01.mlist .item_block:nth-child(1) .item_wrapper {
+    background-color: #6388cf 
+}
+
+.ad01.mlist .item_block:nth-child(2) .item_wrapper {
+    background-color: #6388cf 
+}
+
+.ad01.mlist .item_block:nth-child(3) .item_wrapper {
+    background-color: #6388cf 
+}
+
+.ad01.mlist .item_block:nth-child(4) .item_wrapper {
+    background-color: #6388cf 
+}
+
+.news.mlist .owl-dots .owl-dot.active span {
+    border-color: #6388cf ;
+    background-color: #6388cf 
+}
+
+.bodynews .ff_sitecontent .ff_postPage .news .listContent_post .item_tags a:hover {
+    border-color: #6388cf ;
+    background-color: #6388cf 
+}
+
+#mcontact .contactform .inputtxt.submit:hover {
+    background-color: #6388cf 
+}
+
+.mlist .owl-dots .owl-dot span {
+    border-color: #6388cf 
+}
+
+.news.mlist .owl-dots .owl-dot span {
+    border-color: #6388cf 
+}
+
+input {
+    background-color: 0
+}
+
+#footer {
+    background-color: #f0f0f0
+}
+
+#footer span {
+    color: #9e9e9e
+}
+
+#footer strong {
+    color: #9e9e9e
+}
+
+#mm-slider .slider-info .title {
+    color: #e40807
+}
+
+#mm-slider .slider-info .subtitle {
+    color: #666
+}
+
+.mm-listview>li>a.active {
+    color: #e40807
+}
+
+.dropmenu ul {
+    background-color: #fff
+}
+
+.dropmenu ul li {
+    border-bottom-color: #f0f0f0
+}
+
+.dropmenu ul li a {
+    background-color: #fff
+}
+
+.dropmenu ul li a.active {
+    color: #e40807
+}
+
+#pages a.active,
+#pages a:hover {
+    color: #e40807
+}
+
+.bx-wrapper .bx-controls-direction a {
+    background-color: transparent
+}
+
+.bx-wrapper .bx-controls-direction a i {
+    color: #ccc
+}
+
+.npagePage.post #postWrapper .item_tags a:hover {
+    color: #fff
+}
+
+.npagePage.post .navlist_t .subtitle {
+    color: #999
+}
+
+.npagePage.post #postNav .navitem {
+    border-bottom-color: #f4f4f4
+}
+
+.module.mcounter .module_container {
+    background-color: #f8f8f8
+}
+
+.module.mcounter ul.content_list li {
+    color: #fff
+}
+
+.module.mcounter ul.content_list li p.number .counterDX {
+    color: #3c3c3c
+}
+
+#mcontact .container_header .subtitle {
+    color: #999
+}
+
+.module.mcustomize .header {
+    color: #252525
+}
+
+.module.mcustomize .header .subtitle {
+    color: #7c7c7c
+}
+
+.module.mcustomize .description a.more:hover {
+    border-color: #236ffb
+}
+
+.bx-wrapper .bx-pager.bx-default-pager a.active,
+.bx-wrapper .bx-pager.bx-default-pager a:focus,
+.bx-wrapper .bx-pager.bx-default-pager a:hover {
+    background-color: #a5a5a5
+}
+
+.agent-mobile .service .bx-wrapper .bx-controls-direction a i {
+    color: #fff
+}
+
+.agent-mobile .project .item_block .item_wrapper {
+    background-color: #f8f8f8
+}
+
+.agent-mobile #sitecontent #listContent .item_block:hover .title {
+    color: #fff
+}
+
+.agent-mobile .project .item_block:hover .item_wrapper {
+    background-color: #e40807
+}
+
+.agent-mobile .project .content_list .item_block:hover .subtitle {
+    color: rgba(255, 255, 255, .56)
+}
+
+.agent-mobile .project .content_list .item_block:hover .item_img::before {
+    border-color: rgba(0, 0, 0, .1)
+}
+
+
+#sitecontent .npagePage.post #postContent .title {
+    color: #444
+}
+
+.agent-mobile .npagePage.post #postInfo .description a:hover {
+    background-color: #e40807
+}
+
+.agent-mobile #sitecontent .npagePage.post .project #postInfo .description a:hover {
+    color: #fff
+}
+
+.agent-mobile #sitecontent .ad01 .content_list li:hover .title {
+    color: #fff
+}
+
+.agent-mobile .ad01 .content_list li:hover .subtitle {
+    color: rgba(255, 255, 255, .8)
+}
+
+.agent-mobile .ad01 .content_list li:hover .item_wrapper {
+    background-color: #e40807
+}
+
+.agent-mobile .team_tabs .tab_content .content_list li .title {
+    color: #e40807
+}
+
+.agent-mobile .imagelink {
+    background-color: #fff
+}
+
+.agent-mobile .team .item_block:hover .title {
+    color: #e40807
+}
+
+.agent-mobile .news .item_block:hover .item_info .title {
+    color: #e40807
+}
+
+.agent-mobile .news .content_list .item_wrapper .date_wrap {
+    color: #adadad
+}
+
+.agent-mobile .news .content_list li:last-child {
+    border-color: transparent
+}
+
+.agent-mobile #sitecontent .news #listContent .item_block:hover .title {
+    color: #e40807
+}
+
+#online a:after {
+    background-color: rgba(255, 255, 255, .6)
+}
+
+.mm-listview>li>a.active {
+    color: #6388cf 
+}
+
+.mm-menu .mm-listview>li.mm-selected>a:not(.mm-next) {
+    color: #6388cf 
+}
+
+.agent-mobile .mlist .m_container .content a:hover::after {
+    color: #fff
+}
+
+.agent-mobile .project .item_block:hover .item_wrapper {
+    background-color: #6388cf 
+}
+
+.agent-mobile .mlist .m_container .content .more:hover {
+    background-color: #6388cf ;
+    border-color: #6388cf 
+}
+
+.agent-mobile #category .label {
+    background-color: #6388cf 
+}
+
+.agent-mobile .cate-title {
+    background-color: #6388cf 
+}
+
+.agent-mobile .dropmenu ul li a.active {
+    color: #6388cf 
+}
+
+.agent-mobile .team.mlist .content_list .item_block:hover {
+    background-color: #6388cf 
+}
+
+.agent-mobile .team.mlist .content_list .item_block:hover .item_box .item_wrapper .item_info .title {
+    color: #fff
+}
+
+.agent-mobile .ad01 .content_list li.item_block .item_wrapper {
+    background-color: #fff
+}
+
+.agent-mobile .ad01 .content_list li.item_block:hover .item_wrapper {
+    background-color: #6388cf 
+}
+
+#pages a:hover,
+.agent-mobile #pages a.active {
+    color: #6388cf 
+}
+
+.npagePage.post #postWrapper .item_tags a:hover {
+    border-color: #6388cf ;
+    background-color: #6388cf 
+}
+
+.agent-mobile .npagePage.post .team .navlist li:hover {
+    background-color: #6388cf 
+}
+
+.agent-mobile #sitecontent .news #listContent .item_block:hover .title {
+    color: #6388cf 
+}
+
+#online a {
+    color: #6388cf 
+}
+
+.bx-wrapper .bx-pager.bx-default-pager a {
+    border-color: #6388cf ;
+    background-color: #6388cf 
+}
+
+.bodyteam .ff_pageList .team .content_list .item_block{transition: all .36s ease;}
+
+
+/*pc-color*/
+.project.mlist .content_list .item_img .item_mask{background-color: rgba(99, 136, 207, 0.85);}
+.ff_indexPage .news.mlist .content_list .item_block:hover .details{    border-color: #6388cf; background-color: #6388cf;}
+.bodynews .news.mlist .content_list .item_block:hover .details{    border-color: #6388cf; background-color: #6388cf;}
+
+
+/*mobile -color*/
+.agent-mobile .news .item_block:hover .item_info .title{color: #6388cf;}
+.agent-mobile .service.mlist:not(.imagelink) .content_list .item_block:hover .item_box .item_wrapper{background-color: rgba(99, 136, 207, 0);
+ color: #6388cf;}
+ .agent-mobile .npagePage.post .service.mlist:not(.imagelink) .content_list .item_block:hover .item_box .item_wrapper{color:#6388cf}
+
+
+
+
+.agent-mobile #sitecontent .npagePage.post .team #postContent .title{left: 61px;color:#fff;}
+.agent-mobile #sitecontent .npagePage.post .team #postContent .subtitle{margin-top: -25px;margin-left: 47px;color: rgba(255, 255, 255, 0.82);}
+
+
+
+
+
+.bodyproject .mlist:not(.imagelink) .content_list .item_img{border-radius: 4px;}
+
+
+.ff_indexPage .imagelink {
+    position: initial;
+}
+
+.ff_indexPage div#mcontact + .imagelink {
+    /* position: relative */
+    margin-top: -138px;
+}
+
+.ff_indexPage .imagelink .container_content {
+    position: initial;
+}
+
+.ff_indexPage .imagelink .item_block {
+        width: calc(100% / 8 - 0px);
+}
+.ff_indexPage .imagelink .owl-item .item_block {
+    width: 100%;
+}
+.imagelink {
+     background: none; 
+}
+
+.ff_indexPage .imagelink .owl-carousel .owl-nav.disabled{ display: block; }
+.ff_indexPage .imagelink .owl-nav .owl-prev{background: rgba(0, 0, 0, 0);}
+.ff_indexPage .imagelink .owl-nav .owl-prev .iconfont{color: rgba(39, 38, 38, 0.5);}
+.ff_indexPage .imagelink .mlist .owl-nav .owl-next{ display: block; }
+.ff_indexPage .imagelink .owl-nav .owl-next{background: rgba(0, 0, 0, 0);}
+.ff_indexPage .imagelink .owl-nav .owl-next .iconfont{color: rgba(39, 38, 38, 0.5);}
+
+.ff_indexPage .imagelink .owl-nav .owl-prev.disabled:hover{background: rgba(0, 0, 0, 0);}
+.ff_indexPage .imagelink .owl-nav .owl-next.disabled:hover{background: rgba(0, 0, 0, 0);}
+.ff_indexPage .imagelink .owl-nav .owl-prev.disabled:hover .iconfont{color: rgba(39, 38, 38, 0.5);}
+.ff_indexPage .imagelink .owl-nav .owl-next.disabled:hover .iconfont{color: rgba(39, 38, 38, 0.5);}
+
+
+#footer { background-color: #f0f0f0; margin-top: 20px; padding-top: -2px;}
+.nav .navitem .fa-angle-down { color: rgba(0, 0, 0, 0.28);}

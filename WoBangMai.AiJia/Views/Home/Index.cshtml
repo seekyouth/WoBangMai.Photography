@@ -1,0 +1,139 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = null;
+}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" class="agent-pc theme-w theme-wblue">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="author" content="Maker Cloud" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+
+    <link href="~/Content/Css/lib2.css" rel="stylesheet" />
+    <link href="~/Content/Css/style.base.css" rel="stylesheet" />
+    <link href="~/Content/Css/wblue.css" rel="stylesheet" />
+    <link href="~/Content/Css/base.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery.min.js"></script>
+    <script src="~/Scripts/org.base.js" data-main="baseMain"></script>
+    <script src="~/Scripts/Base.js"></script>
+    <script type="text/javascript">if(window.location.toString().indexOf('pref=padindex') != -1){}else{if(/AppleWebKit.*Mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(navigator.userAgent))){if(window.location.href.indexOf("?mobile")<0){try{if(/Android|Windows Phone|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)){window.location.href="/m/index.php";}else if(/iPad/i.test(navigator.userAgent)){}else{}}catch(e){}}}}</script>
+    <style type="text/css">
+@@media screen and (max-width: 960px) {
+.layer-qq{display: none;}
+}
+table{border-collapse:collapse;border-spacing:0}
+.layer-qq{color:#282828;font-size:14px;font-family:"微软雅黑"}
+.layer-qq{animation:layerqq .7s ease-out;position: fixed;top: 50%;color:#fff;left:50%;width: 480px;height: 282px;background: url(Images/qq.png) no-repeat;text-align: center; z-index: 999;overflow: hidden;}
+.layer-qq h3{margin:0;padding:0;font-size: 40px;text-transform: uppercase;font-weight: bold;padding-top: 15px;}
+.layer-qq strong{font-size: 22px;}
+.layer-qq a.linkqq{display:block;width:138px;height:38px;line-height:38px;border:1px solid rgba(255,255,255,.5);text-align:center;font-size:14px;text-decoration: none;
+	border-radius: 45px;color:#fff;margin:25px auto 0;}
+.layer-qq a.qq-close{display: block;width: 28px;height: 28px;position: absolute;top: 20px;right: 20px;background: url(Images/qqclose.png) no-repeat;
+cursor: pointer;
+}
+.layer-qq a{color:#33e153;text-decoration: none;}
+@@-webkit-keyframes layerqq{
+	from{-webkit-transform: scale(0);transform: scale(0);}
+	to{-webkit-transform: scale(1);transform: scale(1);}
+}
+@@keyframes layerqq{
+	from{transform: scale(0);}
+	to{transform: scale(1);}
+}
+    </style>
+    <title>又一个创客云演示站点！</title>
+</head> 
+<body id="longPage" class="gh0 longPage">
+    <style type="text/css">
+    </style>
+    <div class="bodyMask"></div>
+    <div id="header">
+        <div class="wrapper">
+            <div class="content">
+                <div id="headTop">
+                    <a href="/" id="logo"><img src="/Content/Picture/logo.png" height="44" /></a>
+                </div>
+                <div id="navWrapper">
+                    @{Html.RenderAction("_Nav", "Part");}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="sitecontent" class="ff_sitecontent">
+        <div id="indexPage" class="ff_indexPage" data-scroll-ease="Expo.easeInOut" data-scroll-speed="1" data-control="0" data-control-wheel="0" data-singlescreen="0">
+            @*Banner*@
+            @{Html.RenderAction("_Banner", "Part");}
+            @*Banner*@
+
+            @*Pruduct*@
+            @{Html.RenderAction("_Product", "Part");}
+            @*Pruduct*@
+
+            @*关于我们*@
+            @{Html.RenderAction("_AboutUs", "Part");}
+            @*关于我们*@
+        </div>
+
+        @*案列*@
+        @{Html.RenderAction("_Works", "Part");}
+        @*案列*@
+
+        @*服务*@
+        @{Html.RenderAction("_Servers", "Part");}
+        @*服务*@
+    </div>
+
+    @*相关活动*@
+    @{Html.RenderAction("_Activity", "Part");}
+    @*相关活动*@
+
+    @*新闻中心*@
+    @{Html.RenderAction("_News", "Part");}
+    @*新闻中心*@
+
+    @*联系我们*@
+    @{Html.RenderAction("_Contact", "Part");}
+    @*联系我们*@
+
+    @*友情链接*@
+    @{Html.RenderAction("_Link", "Part");}
+    @*友情链接*@
+
+    @*底部*@
+    @{Html.RenderAction("_Footer", "Part");}
+    @*底部*@
+
+    @*分享*@
+    @{Html.RenderAction("_Shares", "Part");}
+    @*分享*@
+
+    @*定点*@
+    @{Html.RenderAction("_Fixed", "Part");}
+    @*定点*@
+
+    @*在线跳转*@
+    @{Html.RenderAction("_OnlineOpen", "Part");}
+    @*在线跳转*@
+
+    @*在线咨询*@
+    @{Html.RenderAction("_OnlineLx", "Part");}
+    @*在线咨询*@
+
+    @*协助*@
+    @{Html.RenderAction("_OpenAssist", "Part");}
+    @*协助*@
+
+    @*返回顶部*@
+    @{Html.RenderAction("_AssistBtn", "Part");}
+    @*返回顶部*@
+
+    <div class="hide">
+    </div>
+</body>
+</html>

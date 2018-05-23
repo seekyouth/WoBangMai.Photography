@@ -1,0 +1,50 @@
+﻿@model IEnumerable<WoBangMai.Models.cms_news>
+@{  Layout = null; }
+<div class="section_2 bg_light home">
+    <div class="alpha_bg" style="background-image:url(/content/2-news/1.jpg)" data-parallax-background-inertia="0.2"></div>
+
+    <div class="section_2_cell">
+        <div class="section_title_3" data-scroll-reveal>
+            <p><img src='/content/image/title1.png' /></p>
+            <div class="setting">资讯/NEWS</div>
+        </div>
+        <div id="news_slider" class="owl-carousel" data-scroll-reveal>
+            @if (Model == null || Model.Count() <= 0)
+            {
+                <div class="list_item">
+                    <div class="list_text">
+                        <p class="time_1">2014-11-04</p>
+                        <a href="news/-news-1.html"><p class="list_title">为空默认显示</p></a>
+                        <div class="list_brief">
+                            <p>为空默认显示</p>
+                        </div>
+                    </div>
+                    <div class="list_img"><img src="/thumbs/5-44d897aa04f39cf6025789389210875d.jpg"></div>
+
+                </div><!-- item-end -->
+
+            }
+            else
+            {
+                foreach (var item in Model)
+                {
+                    <div class="list_item">
+                        <div class="list_text">
+                            <p class="time_1">@(item.CreateTime == null ? DateTime.Now.ToString("yyyy-MM-dd") : ((DateTime)item.CreateTime).ToString("yyyy-MM-dd"))</p>
+                            <a href="news/-news-3.html"><p class="list_title">@(item.NewsTitle == null ? "" : item.NewsTitle)</p></a>
+                            <div class="list_brief">
+                                <p>@(item.ShortContent == null ? "" : item.ShortContent)
+                            </div>
+                            <div class="more_2"><a href="/News/Details/@item.News_ID">了解详细</a></div>
+                        </div>
+                        <div class="list_img"><a href="/News/Details/@item.News_ID"><img src="@(item.NewsPic==null?"/thumbs/5-6ea8e265c3a5c40a32eb0c5cd15f9d3f.jpg":item.NewsPic)"></a></div>
+
+                    </div><!-- item-end -->
+                }
+            }
+        </div>
+
+
+        <div class="btn_2"><a href="/news">查看更多</a></div>
+    </div><!-- section2结束 -->
+</div>

@@ -1,0 +1,77 @@
+﻿@{
+    Layout = null;
+    var categoryList = ViewBag.categoryList as List<WoBangMai.Models.Category>;
+}
+@model IEnumerable<WoBangMai.Models.News>
+
+<div class="mlist news module ff_slider" style=" background-position: initial;background-size: cover;background-repeat: no-repeat; ">
+    <div class="bgmask"></div>
+    <div class="module_container">
+        <div class="container_header wow">
+            <p class="title">新闻中心</p>
+            <p class="subtitle">News Center</p>
+        </div>
+        <div class="container_category wow movedx" data-movedx-mid="2" data-movedx-distance="15">
+            @if (categoryList != null)
+            {
+                <a href="/News/Index" class="active"> <span>全部</span> </a>
+                foreach (var item in categoryList)
+                {
+                    <a href="/Case/Index/@item.Id" target="_blank"><span>@item.Title??""</span></a>
+                }
+            }
+        </div>
+        <div class="container_content">
+            <div class="content_wrapper slider" data-slider-num="2" data-slider-loop="1">
+                <div class="content_list clearfix">
+                    @if (Model != null)
+                    {
+                        foreach (var item in Model)
+                        {
+                            <div id="item_block_@item.Id" class="item_block_@item.Id item_block wow" style="animation-delay:.1s">
+                                <div class="item_index">
+                                    @item.Title??""
+                                </div>
+                                <a href="/News/Details/@item.Id" class="item_box">
+                                    <div href="/News/Details/@item.Id" class="item_img" target="_blank">
+                                        <img src="@item.ImgUrl??''" />
+                                        <div class="item_mask"></div>
+                                    </div>
+                                    <div class="item_wrapper clearfix">
+                                        <div class="item_info clearfix">
+                                            <div class="date_wrap">
+                                                <span class="year">@item.AddTime.Year</span>
+                                                <i class="time-connect">-</i>
+                                                <span class="m">@item.AddTime.Month</span>
+                                                <i class="time-connect">-</i>
+                                                <span class="d">@item.AddTime.Day</span>
+                                            </div>
+                                            <p class="title ellipsis">@item.Title??""</p>
+                                            <p class="subtitle ellipsis"></p>
+                                        </div>
+                                        <div class="date_wrap">
+                                            <span class="year">@item.AddTime.Year</span>
+                                            <i class="time-connect">-</i>
+                                            <span class="m">@item.AddTime.Month</span>
+                                            <i class="time-connect">-</i>
+                                            <span class="d">@item.AddTime.Day</span>
+                                        </div>
+                                        <div class="item_des">
+                                            <p class="description">@item.ZhaiYao??""</p>
+                                        </div>
+                                    </div>
+                                    <div class="item_index">
+                                        01
+                                    </div>
+                                </a>
+                                <a href="/News/Details/@item.Id" class="details"> MORE<i class="fa fa-angle-right" aria-hidden="true"></i> </a>
+                            </div>
+                        }
+                    }
+                </div>
+                <a href="/News/Index" class="more wow" style="animation-delay:.5s">MORE<i class="fa fa-angle-right" aria-hidden="true"></i></a>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>

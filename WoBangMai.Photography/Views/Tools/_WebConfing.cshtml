@@ -1,0 +1,21 @@
+﻿@model WoBangMai.Models.cms_webconfig
+@{
+    Layout = null;
+        var CategoryModel = ViewBag.CategoryModel as WoBangMai.Models.cms_category;
+}
+
+@if (Model != null)
+{
+    <title>@(Model.WebTitle == null ? "创客云 | 首页/HOME" : Model.WebTitle)</title>
+
+    <meta name="keywords" content="@(Model.WebKeyWords == null ? "创客云" : Model.WebKeyWords)">
+    <meta name="description" content="@(Model.Description == null ? "摄影作品" : Model.Description)">
+}
+else
+{
+    <title>@(CategoryModel.CategoryName == null ? "创客云 | 首页/HOME" : CategoryModel.CategoryName)</title>
+
+    <meta name="keywords" content="@(CategoryModel.CategoryKeyword == null ? "创客云" : CategoryModel.CategoryKeyword)">
+    <meta name="description" content="@(CategoryModel.CategoryName == null ? "摄影作品" : CategoryModel.CategoryName)">
+}
+

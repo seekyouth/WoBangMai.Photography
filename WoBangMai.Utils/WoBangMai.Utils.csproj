@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{578215FC-5C61-4867-AC41-8CC54A7B7524}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WoBangMai.Utils</RootNamespace>
+    <AssemblyName>WoBangMai.Utils</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="HttpHelper">
+      <HintPath>..\Libs\HttpHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>..\Libs\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\Libs\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NPOI">
+      <HintPath>..\Libs\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OOXML">
+      <HintPath>..\Libs\NPOI.OOXML.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXml4Net">
+      <HintPath>..\Libs\NPOI.OpenXml4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXmlFormats">
+      <HintPath>..\Libs\NPOI.OpenXmlFormats.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DynamicJson.cs" />
+    <Compile Include="DynamicXml.cs" />
+    <Compile Include="Encrypt\DESEncrypt.cs" />
+    <Compile Include="Enum\EnumHelper.cs" />
+    <Compile Include="Execl\ColumnInfo.cs" />
+    <Compile Include="Execl\ExcelImporMapper.cs" />
+    <Compile Include="Execl\ExcelImport.cs" />
+    <Compile Include="Execl\ExcelInfo.cs" />
+    <Compile Include="Execl\ExcelUtil.cs" />
+    <Compile Include="Execl\ExeclOutPort.cs" />
+    <Compile Include="Execl\NpoiHelper.cs" />
+    <Compile Include="Execl\调用ExcelImport.cs" />
+    <Compile Include="File\FileHelper.cs" />
+    <Compile Include="Filter\JsonBaseModel.cs" />
+    <Compile Include="Filter\QueryCondition.cs" />
+    <Compile Include="Cache\CacheHelper.cs" />
+    <Compile Include="Cookies\CookiesHelper.cs" />
+    <Compile Include="Data\DataHelper.cs" />
+    <Compile Include="Encrypt\EncryptHelper.cs" />
+    <Compile Include="IMager\ImagerHelper.cs" />
+    <Compile Include="Json\JsonHerper.cs" />
+    <Compile Include="Data\QueryExtensions.cs" />
+    <Compile Include="Session\SessionHelper.cs" />
+    <Compile Include="ZConvert.cs" />
+    <Compile Include="Http\MimeHelper.cs" />
+    <Compile Include="Log\LogHelper.cs" />
+    <Compile Include="Mef\MefConfig.cs" />
+    <Compile Include="Regex\RegexHelper.cs" />
+    <Compile Include="RexImage.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StaticExtend\DataTableListHelper.cs" />
+    <Compile Include="StaticExtend\StringExt.cs" />
+    <Compile Include="WhereIfExtension.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

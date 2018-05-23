@@ -1,0 +1,23 @@
+﻿@model IEnumerable<WoBangMai.Models.cms_category>
+@{
+    Layout = null;
+}
+<div class="side_box has_sub">
+    <div class="section_title_1">
+        <p>作品/GALLERY</p>
+    </div>
+    <div class="catg_name">
+        @if (Model != null && Model.Count() > 0)
+        {
+            foreach (var item in Model)
+            {
+                <a href="/Gallery/Index/@item.Category_ID" class="on">@item.CategoryName</a>
+            }
+        }
+        else
+        {
+            <a href="/categories/01.html" class="on">平面模特摄影</a>
+            <a href="/categories/02.html">国外主题摄影作品</a>
+        }
+    </div>
+</div>

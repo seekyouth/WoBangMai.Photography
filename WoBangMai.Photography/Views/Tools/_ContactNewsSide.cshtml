@@ -1,0 +1,33 @@
+﻿@using WoBangMai.Utils;
+@model WoBangMai.Models.cms_news
+@{ Layout = null;
+    var currentNav = TempData["currentNav"];
+    }
+
+<div class="side_box contact_mini">
+    <div class="section_title_1">
+        <p>联系我们</p>
+    </div>
+    <div class="contact_mini_text">
+        @if (Model != null)
+        {
+            @Html.Raw(Model.NewsContent)
+        }
+        else
+        {
+            <p>
+                欢迎任何形式的媒体与商务合作<br />
+                深入的了解，有利于为您提供更优质的服务<br />
+                QQ：184457364<br />
+                邮箱：184457364@qq.com<br />
+                地址：南宁市西乡塘区秀灵路<br />
+                邮编：530000<br />
+                手机：18076549077<br />
+            </p>
+        }
+        @if (ZConvert.ToInt(currentNav)!=EnumModels.CategoryEnum.Contact.GetHashCode())
+        {
+            <a href="/Contact" class="btn_contact">详细联系方式</a>
+        }
+    </div>
+</div>

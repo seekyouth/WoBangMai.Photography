@@ -1,0 +1,49 @@
+﻿@{ Layout = null;}
+@model  WoBangMai.Models.WebConfig
+
+<div id="mcontact" class="mcontact module bgShow " style="background-image:url(Images/1502854294860_1.jpg);  background-position: initial;background-size: cover;background-repeat: no-repeat; ">
+    <div class="module_container">
+        <div class="container_header wow">
+            <p class="title">联系我们</p>
+            <p class="subtitle">Contact US</p>
+        </div>
+        <div class="container_content">
+            <div class="content_wrapper">
+                <div id="contactlist" class="contactlist">
+                    <div id="contactinfo" class="contactinfo wow">
+                       
+
+                        <h3 class="ellipsis contact_name">@(Model.WebName ?? "广西我帮买有限公司")</h3>
+                        <p class="ellipsis contact_add">地址：@(Model.WebAddress ?? "")</p>
+                        <p class="ellipsis contact_zip">邮编：@(Model.PostCode ?? "")</p>
+                        <p class="ellipsis contact_tel">电话：@(Model.WebTel ?? "")</p>
+                        @*<p class="ellipsis contact_mob">手机：18912366699</p>*@
+                        <p class="ellipsis contact_fax">传真：@(Model.WebFax ?? "")</p>
+                        <p class="ellipsis contact_eml">邮箱：@(Model.WebMail ?? "")</p>
+
+                        <div class="ff_social">
+                            <a class="fl" target="_blank" href="http://weibo.com/web"><i class="fa fa-weibo"></i></a>
+                            <a class="fl" target="_blank" href="tencent://message/?uin=88889999&amp;Site=uemo&amp;Menu=yes"><i class="fa fa-qq"></i></a>
+                            <a id="mpbtn" class="fl" target="_blank" href="/cloud/picture/1505115294665.png"><i class="fa fa-weixin"></i></a>
+                        </div>
+                    </div>
+                    <div id="contactform" class="contactform wow">
+                        <form action="/plus/diy.php" enctype="multipart/form-data" method="post">
+                            <input type="hidden" name="action" value="post" />
+                            <input type="hidden" name="diyid" value="1" />
+                            <input type="hidden" name="do" value="2" />
+                            <p class="contactform_name"> <input type="text" class="inputtxt" name="name" placeholder="姓名" autocomplete="off" /> </p>
+                            <p class="contactform_eml"> <input type="text" class="inputtxt" name="email" placeholder="邮箱" autocomplete="off" /> </p>
+                            <p class="contactform_tel"> <input type="text" class="inputtxt" name="tel" placeholder="电话" autocomplete="off" /> </p>
+                            <p class="contactform_content"> <textarea class="inputtxt" name="content" placeholder="内容" autocomplete="off"></textarea> </p>
+                            <input type="hidden" name="dede_fields" value="name,text;email,text;tel,text;content,multitext" />
+                            <input type="hidden" name="dede_fieldshash" value="ce58c4a56ebfc9b4c1d1b39d7f2ba48b" />
+                            <p class="contactform_submit"> <input class="inputtxt submit" type="submit" value="提交" /> </p>
+                        </form>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

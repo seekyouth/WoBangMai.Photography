@@ -1,0 +1,29 @@
+﻿/*css */
+#pages li{
+text-align: center;
+display: inline-block;
+}
+.thisclass a{
+border-color: #6388cf;
+background-color: #6388cf;
+color: #fff;
+border-radius: 2px;
+}
+.ff_indexPage .service.module{  padding-bottom:0px;padding-top:160px}
+.ff_indexPage .mlist .module_container .container_category{text-align: left;}
+.npagePage .ff_pageTarget .container_category{text-align: left !important;}
+.ff_indexPage .team.module{  margin-top: 200px;    padding-bottom: 0px;}
+.ff_indexPage .ad01.module{padding-bottom: 0px;}
+
+.ff_indexPage .news.module{padding-bottom: 0px;margin-bottom: 0px;}
+.ff_indexPage #mcontact{margin-top:190px}
+
+.ff_indexPage .team.mlist .container_header {
+    top: -230px;
+}
+
+.ff_indexPage .module {
+    padding-top: 160px;
+}
+
+.ff_indexPage .container_category>a{margin-bottom: 15px;}
